@@ -14,3 +14,13 @@ def download_selenium():
     driver = webdriver.Chrome(service=service(ChromeDriverManager().install()),options=chrome_options)
     driver.ger("https://google.com")
     title = driver.title
+
+
+@app.route('/', methods = ['GET', 'POST'])
+def home():
+    if (request.method == 'GET'):
+        return download_selenium()
+
+
+if __name__ == "__main__":
+    app.run(debug=True, port=3000)
