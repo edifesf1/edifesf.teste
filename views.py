@@ -2,7 +2,7 @@ from main import app
 
 import verifica_ativacao
 import abre_whatsapp
-
+from abre_whatsapp import *
 
 from flask import Flask, render_template, request
 
@@ -22,7 +22,7 @@ def loginn():
     if result == "erro":
         return render_template("index.html")
     if result != "erro":
-        result = abre_whatsapp.abre_whatsapp(result)
+        result = abre_whatsapp(result)
         if result == "erro":
             return render_template("erro.html")
     
