@@ -20,7 +20,7 @@ def loginn():
     imei = request.form['imei'] #PEGA A INFORMAÇÃO DO FORMULARIO DE LOGIN
     result = verifica_ativacao.verifica_ativacao(imei) #ARMAZENA EM RESULTADO A PALARA ERRO PARA BLOQUEAR
     if result == "erro":
-        return render_template("login.html")
+        return render_template("index.html")
     if result != "erro":
         result = abre_whatsapp.abre_whatsapp(result)
         if result == "erro":
