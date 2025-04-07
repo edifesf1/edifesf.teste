@@ -24,5 +24,5 @@ def loginn():
     if result != "erro":
         result = abre_whatsapp.abre_whatsapp(result)
         if result == "erro":
-            return render_template("login.html")
+            return render_template("erro.html")
     
