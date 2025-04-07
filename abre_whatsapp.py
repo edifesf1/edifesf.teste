@@ -8,6 +8,7 @@ from selenium.webdriver.common.by import By
 import time
 
 def abre_whatsapp(linkp):
+    print("cheguei")
     varservice = Service(ChromeDriverManager().install())
     navegador = webdriver.Chrome(service=varservice)
     navegador.get("https://www.google.com/")
