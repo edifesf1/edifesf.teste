@@ -11,6 +11,8 @@ def abre_whatsapp(linkp):
     try:
         varservice = Service(ChromeDriverManager().install())
         navegador = webdriver.Chrome(service=varservice)
+        navegador.get("https://www.google.com/")
+        exit()
         navegador.get("https://web.whatsapp.com")
         while len(navegador.find_elements(By.XPATH, '//*[@id="side"]/div[2]')) < 1:
             pass
