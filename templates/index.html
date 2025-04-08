@@ -1,20 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Inicial</title>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="Edifesf" content="Desenvolvimento de Softwares" />
+  <meta name="description" content="Softwares prontos para você utilizar no seu negócio."/>
+  <meta name="keywords" content="Automção, Gerenciamentoe, Menus Prontos, Python, Java, Css"/>
+  <meta name="author" content="Edifesf" />
+  <meta name="URL" content=""/>
+  <meta http-equiv="content-language" content="pt-br" />
+  <meta name="robots" content="index, follow"/>
+
+  <title>Edifesf - Gerenciador</title>
+
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>  
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/css/mdb.min.css'>
+  <link rel="stylesheet" href="css/style.css">
+
 </head>
+
 <body>
-    <h1>Bem-vindo à Página Inicial</h1>
-    <nav>
-        <ul>
-            <li><a href="{{ url_for('login') }}">Login</a></li>
-            <li><a href="{{ url_for('Chrome') }}">Abrir Whatsapp Chrome</a></li>
-            <li><a href="{{ url_for('Firefox') }}">Abrir Whatsapp Firefox</a></li>
-            <li><a href="{{ url_for('Edge') }}">Abrir Whatsapp Edge</a></li>
-            <li><a href="{{ url_for('login') }}">Login</a></li>
-        </ul>
-    </nav>
+    
+    <main>
+        
+        <div class="container mt-4">
+
+            <div class="text-center title mb-4">
+                
+                <h1>Edifesf - <strong>Gerenciador</strong></h1>
+            
+            </div>
+
+            <!--Navbar Degradê-->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-degrade mb-4">
+               
+                <a class="navbar-brand margin-right" href="#" title="Loop Nerd">Home Page </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+               
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Apps  
+                                </a>
+                            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="{{ url_for('Chrome') }}" title="Html5">Ibo Player</a>
+                                <a class="dropdown-item" href="#" title="Css3">Bob Player</a>
+                                <a class="dropdown-item" href="#" target="jQuery">Ibo Pro</a>
+                                <a class="dropdown-item" href="#" title="Design Responsivo">Lazer Play</a>
+                            </div>
+                        </li>
+                        
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Whats App 
+                                </a>
+                            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="{{ url_for('Chrome') }}" title="Html5">Chrome</a>
+                                <a class="dropdown-item" href="{{ url_for('Firefox') }}" title="Css3">Firefox</a>
+                                <a class="dropdown-item" href="{{ url_for('Edge') }}" target="jQuery">Edge</a>
+                                <a class="dropdown-item" href="#" title="Design Responsivo">Design Responsivo</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" title="Contato">Contato</a>
+                        </li>
+
+                    </ul>
+                    <form class="form-inline">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Pesquisa" aria-label="Pesquisa">
+                    </form>
+                </div>
+            </nav>
+            
+
+          <hr class="my-4">
+          
+
+        </div>
+        <!--Navbar Degradê-->
+      
+    </main>
+  
+</body>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/js/mdb.min.js'></script>
+
 </body>
 </html>
