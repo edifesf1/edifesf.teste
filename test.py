@@ -8,5 +8,5 @@ def test(linkp):
         navegador = p.chromium.launch(headless=False) #headless é para rodar em segundo plano sem mostrar a pagina
         pagina = navegador.new_page()
         pagina.goto("https://web.whatsapp.com")
-        time.sleep(1)
+        time.sleep(4)
     return("erro")
