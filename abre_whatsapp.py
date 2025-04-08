@@ -1,11 +1,10 @@
-
-from playwright.sync_api import sync_playwright
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.service import Service
 import time
 
 def abre_whatsapp(linkp):
-    with sync_playwright() as p:
-        navegador = p.chromium.launch(headless=False) #headless é para rodar em segundo plano sem mostrar a pagina
-        pagina = navegador.new_page()
-        pagina.goto("https://web.whatsapp.com")
-        time.sleep(5)
-    return("erro")
+    servico = Service(ChromeDriverManager().install())
+    navegador = webdriver.Chrome(service=servico)
+    navegador.get("https://web.whatsapp.com")
+    time.sleep(10)
