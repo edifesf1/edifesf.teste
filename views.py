@@ -1,8 +1,8 @@
 from main import app
 
 import verifica_ativacao
-import abre_whatsapp
-
+#import abre_whatsapp
+import test
 
 from flask import Flask, render_template, request
 
@@ -22,7 +22,6 @@ def loginn():
     if result == "erro":
         return render_template("login.html")
     if result != "erro":
-        result = abre_whatsapp.abre_whatsapp(result)
+        result = test.test(result)
         if result == "erro":
             return render_template("login.html")
-    
