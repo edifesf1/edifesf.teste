@@ -1,12 +1,16 @@
 import continua_sair
 
-from playwright.sync_api import sync_playwright
+from selenium import webdriver
+from selenium.webdriver.common.by import By
 import time
 
-def test(linkp):
-    with sync_playwright() as p:
-        navegador = p.chromium.launch(headless=False) #headless é para rodar em segundo plano sem mostrar a pagina
-        pagina = navegador.new_page()
-        pagina.goto("https://web.whatsapp.com")
-        time.sleep(4)
-    return("erro")
+def abre_whatsapp(linkp):
+    try:
+        navegador = webdriver.Chrome()
+        navegador.get("https://web.whatsapp.com")
+        while len(navegador.find_elements(By.XPATH, '//*[@id="side"]/div[2]')) < 1:
+            pass
+            time.sleep(5)
+        #continua_sair.continua_sair(navegador, linkp)
+    except:
+         navegador.get("https://web.whatsapp.com")
