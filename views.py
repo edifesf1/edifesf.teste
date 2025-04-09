@@ -1,4 +1,7 @@
+
 from main import app
+import clouddy
+
 
 import verifica_ativacao
 import abre_whatsapp_Firefox
@@ -39,4 +42,9 @@ def Firefox():
 @app.route("/abre_whatsapp3")
 def Edge():
     abre_whatsapp_Edge.abre_whatsapp()
+    return render_template("index.html")
+
+@app.route("/clouddy")
+def Clouddy():
+    clouddy.clouddy()
     return render_template("index.html")
